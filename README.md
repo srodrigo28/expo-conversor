@@ -1,4 +1,6 @@
 ## Expo Conversor
 
-## Versões
+> * Versões
 "expo": "~54.0.30"
+
+> * Conversor com api

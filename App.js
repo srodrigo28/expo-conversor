@@ -11,6 +11,8 @@ export default function App() {
      <View>
       <StatusBar style="light" />
       <ScrollView style={styles.scrollView}>
+        
+        {/* view header */}
         <View>
         <Text style={styles.title}>
           Conversor de Moedas
@@ -20,6 +22,7 @@ export default function App() {
         </Text>
       </View>
 
+      {/* view item principal */}
       <View>
         <Text style={styles.label}>De: USD </Text>
         <Button 
