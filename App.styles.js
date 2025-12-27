@@ -39,5 +39,14 @@ export const styles = StyleSheet.create({
         color: colors.label,
         marginBottom: 8,
         fontSize: 14,
+    },
+    currencyGrid: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: -4,
+        marginBottom: 16,
+        marginTop: 8,      
     }
 })

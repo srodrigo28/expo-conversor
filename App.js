@@ -3,6 +3,8 @@ import { Platform, Text, View, ScrollView } from 'react-native';
 import { Button } from './src/components/Button';
 import { KeyboardAvoidingView } from 'react-native-web';
 import { styles } from './App.styles.js';
+import { currencies } from './src/constants/currencies.js';
+import { Input } from './src/components/Input/index.js';
 
 export default function App() {
   return (
@@ -25,11 +27,20 @@ export default function App() {
 
           {/* view item principal */}
           <View style={styles.card}>
-            <Text style={styles.label}>De: USD </Text>
-            <Button
-              variant='secondary' onPress={() => alert('Hello boy')} />
+            <Text style={styles.subTitle}>De: USD </Text>
+            <View style={styles.currencyGrid}>
+              {currencies.map( currency => (
+                <Button variant='primary' key={currency.code} 
+                  onPress={() => alert(currency.name)} currency={currency}>
+                </Button>
+              )) }
+            </View>
+              <Input 
+                label="Valor" 
+                value="" 
+                onChangeText={() => {}}
+              />
           </View>
-
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
